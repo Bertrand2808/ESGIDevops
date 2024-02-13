@@ -15,6 +15,7 @@ app.get('/', (req, res) => {
 
   visits++;
   fs.writeFileSync(VISITS_FILE, visits.toString());
+  console.log('Requête HTTP reçue. Nombre de visites :', visits); // Ajout du log
 
   const html = `
       <!DOCTYPE html>
